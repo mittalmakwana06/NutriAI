@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+.auth-page {
+  min-height: 100vh;
+  background: #f3f8f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 650px;
+  background: #ffffff; /* JSX URL ki jagah solid background color */
+  border-radius: 25px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= LEFT SIDE ================= */
+
+.auth-info {
+  background: #eaf7ef;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1b4332; /* Visible dark green text */
+  margin-bottom: 60px;
+}
+
+.auth-info h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  color: #111827; /* Dark title text */
+  margin: 0 0 20px;
+}
+
+.auth-info > p {
+  color: #5f6f65;
+  line-height: 1.7;
+  max-width: 430px;
+  margin-bottom: 35px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.feature > span {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.feature strong {
+  display: block;
+  font-size: 15px;
+  color: #1b4332; /* Clearly visible feature title text */
+  margin-bottom: 4px;
+}
+
+.feature small {
+  color: #718078;
+}
+
+/* ================= FORM ================= */
+
+.auth-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #ffffff;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-form h2 {
+  font-size: 30px;
+  color: #111827;
+  margin: 0 0 8px;
+}
+
+.auth-subtitle {
+  color: #777;
+  margin: 0 0 30px;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: #374151;
+}
+
+.auth-form input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d9dfdb;
+  border-radius: 9px;
+  padding: 0 14px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 18px;
+  transition: 0.2s;
+  
+  /* Input typing text visibility fix */
+  background-color: #ffffff !important;
+  color: #111827 !important; 
+}
+
+.auth-form input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-form input:focus {
+  border-color: #52a86b;
+  box-shadow: 0 0 0 3px rgba(82, 168, 107, 0.1);
+}
+
+.auth-button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 9px;
+  background: #3c9b59;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.auth-button:hover {
+  background: #31854b;
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-footer {
+  text-align: center;
+  color: #777;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #31854b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  background: #fff0f0;
+  color: #d33;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.mobile-brand {
+  display: none;
+  color: #1b4332;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 850px) {
+  .auth-page {
+    padding: 20px;
+  }
+
+  .auth-container {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
+
+  .auth-info {
+    display: none;
+  }
+
+  .auth-form-container {
+    padding: 45px 35px;
+  }
+
+  .mobile-brand {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+  .auth-page {
+    padding: 0;
+    min-height: 100vh;
+    background: white;
+    align-items: stretch;
+  }
+
+  .auth-container {
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .auth-form-container {
+    padding: 30px 20px;
+    align-items: flex-start;
+  }
+
+  .auth-form {
+    max-width: none;
+  }
+
+  .mobile-brand {
+    font-size: 23px;
+    margin-bottom: 40px;
+  }
+
+  .auth-form h2 {
+    font-size: 26px;
+  }
+
+  .auth-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .auth-form input {
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .auth-button {
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .auth-footer {
+    line-height: 1.6;
+  }
+}
